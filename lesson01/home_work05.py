@@ -1,15 +1,20 @@
-income = float(input("Укажите вашу выручку за период"))
-costs = float(input("Укажите сумму издержек за период"))
-profit = income - costs
-losses = costs - income
-profitability = profit / income
-if income > costs:
-    print(f"Вы отработали период с прибылью в размере - + {profit}")
-    print(f"Рентабильность =  {profitability}")
-if costs > income:
-    print(f"Вы отработали период в минус. Сумма издержек -  + {losses}")
+# Реализовать структуру «Рейтинг», представляющую собой не возрастающий набор натуральных чисел.
+# У пользователя необходимо запрашивать новый элемент рейтинга.
+# Если в рейтинге существуют элементы с одинаковыми значениями,
+# то новый элемент с тем же значением должен разместиться после них.
 
-employees = int(input("Сколько сотрудников у вас в штате ?"))
-per_employee = profit / employees
-print(f"Прибыль на сотруднка  = {per_employee}")
+
+s = [7, 6, 5, 4, 3, 2]
+
+tryCount = 5
+#
+i = 0
+while i < tryCount:
+    user = int(input("Введите число >>> "))
+    s.append(user)
+    s.sort(reverse=True)
+    print(s)
+    i = i + 1
+
+
 
