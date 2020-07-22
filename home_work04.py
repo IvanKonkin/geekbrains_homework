@@ -1,12 +1,13 @@
-# user_number = int(input("Введите целое положительное число"))
-# array = str(user_number)
-# print(max(array))
+# Пользователь вводит строку из нескольких слов, разделённых пробелами.
+# Вывести каждое слово с новой строки.
+# Строки необходимо пронумеровать.
+# Если в слово длинное, выводить только первые 10 букв в слове.
+user_answer = input("Введите несколько слов, разделённых пробелами")
 
-user_number = int(input("Введите целое положительное число"))
-last_number = user_number % 10
+separate_str = user_answer.split()
+for index, value in enumerate(separate_str, 1):
+    print("{}. {}".format(index, value))
 
-while user_number > 0:
-    if user_number % 10 > last_number:
-        last_number = user_number % 10
-    user_number = user_number // 10
-print(last_number)
+
+
+
